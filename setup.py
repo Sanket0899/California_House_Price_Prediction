@@ -1,12 +1,12 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 from typing import List
 
 #DECLARING VARIABLES FOR SETUP FUNCTION
 PROJECT_NAME='housing_predictor'
-VERSION='0.0.1'
+VERSION='0.0.3'
 AUTHOR="Sanket"
 DESCRIPTION='This is fsds nov first project'
-PACKAGES=['Housing']
+
 REQUIREMENT_FILE_NAME='requirements.txt'
 
 def get_requirements_list() -> List[str]:
@@ -19,14 +19,14 @@ def get_requirements_list() -> List[str]:
     """
     
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        requirement_file.readlines()
+        requirement_file.readlines().remove("-e .")
 
 setup(
     name=PROJECT_NAME,
     version=VERSION,
     author=AUTHOR,
     description=DESCRIPTION,
-    package=PACKAGES,
+    package=find_packages(),
     install_requires=get_requirements_list()
 )
 
