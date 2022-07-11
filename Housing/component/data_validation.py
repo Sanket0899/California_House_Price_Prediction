@@ -1,4 +1,4 @@
-from tkinter import E
+
 from Housing.entity.config_entity import DataValidationConfig
 from Housing.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
 from Housing.exception import HousingException
@@ -128,5 +128,6 @@ class DataValidation:
 
             )
             logging.info(f"Data validation artifact {data_validation_artifact}")
+            return data_validation_artifact
         except Exception as e:
             raise HousingException(e,sys) from e
