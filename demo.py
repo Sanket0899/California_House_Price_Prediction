@@ -13,13 +13,15 @@ def main():
         # print(data_val)
         # data_val=Configuration().get_data_transformation_config()
         # print(data_val)
+        # model_train=Configuration().get_model_trainer_config()
+        # print(model_train)
         
     except Exception as e:
         logging.error(f"{e}")
         print(e)
 
 if __name__ == ("__main__"):
-    main()
+     main()
 
 
  
