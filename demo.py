@@ -1,14 +1,16 @@
 import logging
-from Housing.pipeline.pipeline import pipeline
+from Housing.pipeline.pipeline import Pipeline
 from Housing.exception import HousingException
 from Housing.config.configuration import Configuration
 from Housing.component.data_validation import DataValidation
 import dill
+import os,sys
 
 def main():
     try:
-        pipline=pipeline()
-        pipline.run_pipeline()
+        config_path = os.path.join("config","config.yaml")
+        pipeline = Pipeline(Configuration(config_file_path=config_path))
+        pipeline.start()
         # data_val=Configuration().get_data_validation_config()
         # print(data_val)
         # data_val=Configuration().get_data_transformation_config()
