@@ -1,3 +1,12 @@
+##Problem Statement
+
+The goal of Calrifornia House Price prediction project is to predict the efficient house pricing for realestate customers with respect to their budgets and priorities.
+It will aslo help us understand the relationship between house features and how these variables are used to predict house price.
+
+
+
+
+
 ## Start Machine Learning project.
 
 ### Software and account Requirement.
