@@ -1,13 +1,40 @@
-##Problem Statement
+## Problem Statement
 
 The goal of Calrifornia House Price prediction project is to predict the efficient house pricing for realestate customers with respect to their budgets and priorities.
 It will aslo help us understand the relationship between house features and how these variables are used to predict house price.
 
+## Data Ingestion
+
+1. In this phase we will download the dataset from the URL.
+2. The data present in the URL is in zip file we will extract that data and convert the data into train and test split in this phase.
+
+## Data Validation.
+
+1. In This step, we perform different sets of validation on the available data.
+2. We validate the number of columns present,the datatype of columns,etc in the data with the help of the schema file
+3. We also validate if there is a data drift present in the train and test data.
+
+## Data Transformation
+
+1. In this phase we add some feature which will help us increase the accuracy of the model.Also perform the different EDA techinques such as the scaling,imputing,encoding for the categorical features.
+2. And after the transformation of the data this data is stored in transformed train and test directory.
+
+## Model Trainer
+
+1. The data stored in the transformed train and test directories is loaded and with the help of model_config.yaml file the best model is calculated for both train and test dataset and depending on the base accuracy the best model is accepted.
+2. In this we have also created a function which will combine the preprocessing model and the best model selected and then this model is stored.
+
+## Model Evaluation.
+
+1. This phase is created to implement the model retraining approach.
+2. Here we evaluate our previous model with the new model which we have achieved with the help of the new data.
+3. And then the best model among this is saved.
+
+## Model pusher.
+1. This phase is used to export and store the best model.
 
 
-
-
-## Start Machine Learning project.
+-----------------------------------------------------------
 
 ### Software and account Requirement.
 
